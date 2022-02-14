@@ -1,16 +1,21 @@
-import Header  from '../header/Header'; 
+import Header from '../header/Header';
 import data from '../../data/db.json';
 import Tours from '../tours/Tours';
 import Footer from '../footer/Footer';
-function Home()
-{
+
+import { Routes, Route } from 'react-router-dom';
+function Home() {
     return (
 
         <>
-          <Header />
-      <Tours data={data} />
-      <Footer />
-        </>
-    );
+
+            <Header />
+            <Routes> <Route path='/'element={<Tours data={data}></Tours>} ></Route>  
+            
+            </Routes>
+       
+                <Footer />
+            </>
+            );
 }
-export default Home;
+            export default Home;
