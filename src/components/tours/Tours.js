@@ -1,15 +1,14 @@
+import { Link } from 'react-router-dom';
+import Tour from './tour/Tour';
 function Tours(props) {
 
     return (
         <>
             {props.data.map(meme => {
                 return (
-                    <div>
-                        <img src={meme.image} alt={meme.name} />
-                        <h3>Name : {meme.name}</h3>
-                       
-                    </div>
-                );
+                
+  
+                             <Link to={`/city/${meme.id}`}><Tour tour={meme}/></Link> );
             })}
         </>
     );
