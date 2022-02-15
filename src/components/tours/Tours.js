@@ -4,11 +4,16 @@ function Tours(props) {
 
     return (
         <>
-            {props.data.map(meme => {
+            {props.data.map((meme,idx)=> {
                 return (
                 
-  
-                             <Link to={`/city/${meme.id}`}><Tour tour={meme}/></Link> );
+                             <div key={idx}> 
+                             <Link 
+                             to={`/city/${meme.id}`}>
+                                 <Tour tour={meme}/>
+                                 </Link> );
+                             </div>
+                             );
             })}
         </>
     );
